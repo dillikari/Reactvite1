@@ -1,5 +1,5 @@
 
-// By using Props
+// By using Props    TASK -1
 
 // import React, { useState } from 'react'
 // import One from './Component1/One'
@@ -29,38 +29,56 @@
 // export default App
 
 
-// without using props we can use useContext()
+// without using props we can use useContext()    TASK -2
 
-import { createContext, useState } from 'react'
-import Four from './Component2/Four'
-import One from './Component2/One'
-import Two from './Component2/Two'
-import Three from './Component2/Three'
+// import { createContext, useState } from 'react'
+// import Four from './Component2/Four'
+// import One from './Component2/One'
+// import Two from './Component2/Two'
+// import Three from './Component2/Three'
 
-export const createcontextValue = createContext()
+// export const createcontextValue = createContext()
 
-function App(){
-  const [theme,setTheme]=useState('light')
+// function App(){
+//   const [theme,setTheme]=useState('light')
 
-  const colorTheme=()=>
-  {
-    setTheme((colorvalue)=>colorvalue==='light'?'dark':'light')
-  }
+//   const colorTheme=()=>
+//   {
+//     setTheme((colorvalue)=>colorvalue==='light'?'dark':'light')
+//   }
 
-  return(
-    <>
-    <createcontextValue.Provider value={{theme:theme}}>
-    <h1>Number of Student</h1>
-    <button onClick={colorTheme}>Change Color</button>
-    <Four />
-    <One/>
-    <Two/>
-    <Three/>
-    </createcontextValue.Provider>
+//   return(
+//     <>
+//     <createcontextValue.Provider value={{theme:theme}}>
+//     <h1>Number of Student</h1>
+//     <button onClick={colorTheme}>Change Color</button>
+//     <Four />
+//     <One/>
+//     <Two/>
+//     <Three/>
+//     </createcontextValue.Provider>
       
+//     </>
+//   )
+// }
+// export default App
+
+
+
+
+// By using useContext     TASK -3
+
+
+import React from 'react'
+import One from './Component3/One'
+import Two from './Component3/Two'
+
+function App() {
+  return (
+    <>
+      <One/>
     </>
   )
 }
 export default App
-
 
